@@ -1,0 +1,69 @@
+/* Hero.module.css */
+
+/* ===================== */
+/*   Animated Gradient   */
+/* ===================== */
+.animated-bg {
+  background: linear-gradient(270deg, #FF5733, #33C1FF, #FFC300, #FF5733);
+  background-size: 800% 800%;
+  animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===================== */
+/*      Fade & Slide     */
+/* ===================== */
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+.fade-in-delay {
+  animation: fadeInDelay 1.5s forwards;
+  animation-delay: 0.5s;
+}
+
+.slide-up {
+  animation: slideUp 1s forwards;
+  animation-delay: 1s;
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.fadeInDelay {
+  animation: fadeIn 1s ease-in-out 0.5s;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+/* ===================== */
+/*     Keyframes         */
+/* ===================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDelay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+  

@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap')
+layer(base);
+
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+ --breakpoint-*: initial;
+  --breakpoint-xs: 450px;
+  --breakpoint-sm: 575px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-2xl: 1400px;
+
+  /* Basic Colors */
+  --color-current: currentColor;
+  --color-transparent: transparent;
+  --color-white: #ffffff;
+  --color-black: #111111;
+  --color-dark: #1a1a1a;
+  --color-primary: #FF5733; /* New Orange */
+  --color-secondary: #33C1FF; /* Cyan */
+  --color-accent: #FFC300; /* Yellow Highlight */
+  --color-bg-color-dark: #1C1C1E; 
+  --color-body-color: #444444;
+  --color-body-color-dark: #AAAAAA;
+
+  /* Grays */
+  --color-gray-50: #f9f9f9;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+  --color-gray-dark: #1e232e;
+  --color-gray-light: #f0f2f9;
+
+  /* Shadows */
+  --shadow-btn: 0px 4px 6px rgba(255, 87, 51, 0.3);
+  --shadow-btn-hover: 0px 6px 10px rgba(255, 87, 51, 0.4);
+  --shadow-submit: 0px 5px 20px rgba(255, 87, 51, 0.1);
+  --shadow-submit-dark: 0px 5px 20px rgba(255, 87, 51, 0.1);
+  --shadow-feature-2: 0px 10px 40px rgba(255, 87, 51, 0.12);
+}
+
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility sticky {
+  & .header-logo {
+    @apply py-5 lg:py-2;
+  }
+
+  & .menu-scroll.active {
+    @apply opacity-70;
+  }
+}
+
+@utility header-logo {
+  .sticky & {
+    @apply py-5 lg:py-2;
+  }
+}
+
+@utility menu-scroll {
+  .sticky &.active {
+    @apply opacity-70;
+  }
+}
+
+@utility active {
+  .sticky &.menu-scroll {
+    @apply opacity-70;
+  }
+}
+
+@utility dot {
+  input#togglePlan:checked ~ & {
+    @apply translate-x-full;
+  }
+}
+
+@utility box {
+  input#checkboxLabel:checked ~ & span {
+    @apply opacity-100;
+  }
+}
+
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--color-gray-50);
+    color: var(--color-body-color);
+  }
+
+  a {
+    color: var(--color-primary);
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: var(--color-secondary);
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    color: var(--color-dark);
+  }
+
+  button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    box-shadow: var(--shadow-btn);
+    transition: all 0.3s ease;
+  }
+
+  button:hover {
+    background-color: var(--color-secondary);
+    box-shadow: var(--shadow-btn-hover);
+  }
+}
+
+@layer components {
+  input[type="checkbox"]:checked ~ label span svg {
+    @apply inline-flex;
+  }
+}

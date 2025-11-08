@@ -1,0 +1,72 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/components/Hero/Hero.module.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+/* Hero.module.css */
+
+/* ===================== */
+/*   Animated Gradient   */
+/* ===================== */
+.Hero_animated-bg__Og2Wv {
+  background: linear-gradient(270deg, #FF5733, #33C1FF, #FFC300, #FF5733);
+  background-size: 800% 800%;
+  animation: Hero_gradientMove__pTTCc 15s ease infinite;
+}
+
+@keyframes Hero_gradientMove__pTTCc {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===================== */
+/*      Fade & Slide     */
+/* ===================== */
+.Hero_fade-in__EzPWx {
+  animation: Hero_fadeIn__2TNNN 1s forwards;
+}
+
+.Hero_fade-in-delay__OgzCd {
+  animation: Hero_fadeInDelay__BrJfc 1.5s forwards;
+  animation-delay: 0.5s;
+}
+
+.Hero_slide-up__35BxT {
+  animation: Hero_slideUp__bCYQ0 1s forwards;
+  animation-delay: 1s;
+}
+
+.Hero_fadeIn__2TNNN {
+  animation: Hero_fadeIn__2TNNN 1s ease-in-out;
+}
+
+.Hero_fadeInDelay__BrJfc {
+  animation: Hero_fadeIn__2TNNN 1s ease-in-out 0.5s;
+}
+
+.Hero_animate-fadeInUp__4zjtb {
+  animation: Hero_fadeInUp__wREaj 1s ease-in-out forwards;
+}
+
+/* ===================== */
+/*     Keyframes         */
+/* ===================== */
+@keyframes Hero_fadeIn__2TNNN {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes Hero_fadeInDelay__BrJfc {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes Hero_slideUp__bCYQ0 {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes Hero_fadeInUp__wREaj {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+  
