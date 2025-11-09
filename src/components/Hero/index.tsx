@@ -14,31 +14,39 @@ const Hero = () => {
         Selective Works of <span className="text-orange-300">Hassan Siddiqui</span>
       </h1>
       <p className="text-gray-200 max-w-md">
-        A curated collection of creative, development, and design projects from 2017 to 2025.
+        A curated collection of creative, development, and design projects from 2024 to 2025.
       </p>
       <Link
-        href="/projects"
+        href="/"
         className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 font-semibold transition rounded-lg shadow-md"
       >
         View Projects
       </Link>
     </div>
 
-    <div className={`relative w-full h-[400px] bg-gray-800 rounded-xl shadow-xl overflow-hidden flex items-center justify-center ${styles.fadeInDelay}`}>
-      {/* Decorative overlay */}
-      <div className="absolute top-0 left-0 w-1/2 h-full bg-orange-600 opacity-20 rounded-l-xl"></div>
+    <div
+  className={`relative w-full h-[400px] rounded-xl shadow-xl overflow-hidden flex items-center justify-center ${styles.fadeInDelay}`}
+  style={{
+    backgroundImage: "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')", // apni image ka path yahan do
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
+  {/* Overlay (optional dark layer) */}
+  <div className="absolute inset-0 bg-black/40"></div>
 
-      {/* Info Text */}
-      <div className="absolute bottom-6 left-6 z-10">
-        <p className="text-sm text-gray-300">2017–2025</p>
-        <h2 className="text-2xl font-bold text-white">Season 9</h2>
-      </div>
+  {/* Info Text */}
+  <div className="absolute bottom-6 left-6 z-10">
+    <p className="text-sm text-gray-300">2024–2025</p>
+    <h2 className="text-2xl font-bold text-white">MHS</h2>
+  </div>
 
-      <div className="absolute bottom-6 right-6 z-10 text-right text-gray-300 text-xs">
-        info@email.com <br />
-        www.domain.com
-      </div>
-    </div>
+  <div className="absolute bottom-6 right-6 z-10 text-right text-gray-300 text-xs">
+    hassansiddiquis486@email.com <br />
+    www.domain.com
+  </div>
+</div>
+
     
   </div>
 </section>
